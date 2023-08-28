@@ -94,17 +94,26 @@ function getPasswordOptions() {
   let lengthPassword = parseInt(
     prompt("How many characters do you want in your password")
   )
-  
+
+// setting conditions to confirm user input for passowrd length is Valid
+  if(isNaN(lengthPassword)===true){
+    alert("Null values not accepted! Do specify a number for you password length ")
+  }
 }
 
 // Function for getting a random element from an array
 function getRandom(arr) {
   let randomIndex = Math.floor(Math.random() * arr.lengthPassword)
+  let randomElement = arr[randomIndex]; 
 
+  return randomElement;
+   
 }
 
 // Function to generate password with user input
 function generatePassword() {
+  let options = getPasswordOptions();
+
 
 }
 
