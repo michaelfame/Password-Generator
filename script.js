@@ -98,8 +98,17 @@ function getPasswordOptions() {
 // setting conditions to confirm user input for passowrd length is Valid
   if(isNaN(lengthPassword)===true){
     alert("Null values not accepted! Do specify a number for you password length ")
+    return;
+  }
+/* Conditional statement for comparing the length of password input to be
+between 10 and 64 length */
+
+  if(lengthPassword < 10 || lengthPassword >= 65){
+   lengthPassword = prompt(" How many characters do you want your password to be? \n Password must be between 10 and 64 characters.");
+    return; 
   }
 }
+ 
 
 // Function for getting a random element from an array
 function getRandom(arr) {
